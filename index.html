@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <title>Môj To Do List</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+  <!-- MODAL na potvrdenie -->
+  <div id="confirmModal" class="modal">
+    <div class="modal-content">
+      <p>Naozaj chceš túto úlohu zmazať?</p>
+      <div class="modal-actions">
+        <button id="confirmDelete" class="delete-btn">Zmazať</button>
+        <button id="cancelDelete">Zrušiť</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Horný panel -->
+  <div class="top-bar">
+    <div class="top-left">
+      <button class="export-btn" onclick="exportToPDF()">Export do PDF</button>
+    </div>
+    <div class="top-right">
+      <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+    </div>
+  </div>
+
+  <!-- Hlavný obsah -->
+  <div class="container">
+    <h1>Môj <span style="color: #007bff;">To Do</span> List</h1>
+
+    <div class="new-task-container">
+      <h2>📝 Nová úloha</h2>
+      <div class="input-area">
+        <input type="text" id="taskInput" placeholder="Zadaj úlohu...">
+        <button class="add-btn" onclick="addTask()">
+          <span class="add-icon">➕</span> Pridať
+        </button>
+      </div>
+    </div>
+
+    <div class="search-container">
+      <h2>🔍 Vyhľadávanie</h2>
+      <div class="search-area">
+        <input type="text" id="searchInput" placeholder="Hľadať úlohu...">
+      </div>
+    </div>
+
+    <div class="tables">
+      <div class="table active">
+        <h2>🕑 Aktívne úlohy</h2>
+        <ul id="activeTasks"></ul>
+      </div>
+      <div class="table done">
+        <h2>✅ Hotové úlohy</h2>
+        <ul id="doneTasks"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
