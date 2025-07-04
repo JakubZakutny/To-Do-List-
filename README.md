@@ -16,7 +16,7 @@ Jednoduchá webová To Do aplikácia napísaná v **HTML**, **CSS** a **JavaScri
 
 ## 🔗 **Live ukážka**
 
-👉 [**Spustiť online**]([https://jakubzakutny.github.io/To-Do-List/](https://jakubzakutny.github.io/To-Do-List-/))  
+👉 [**Spustiť online**]([https://jakubzakutny.github.io/To-Do-List/](https://jakubzakutny.github.io/To-Do-List-/)  
 *(Klikni a vyskúšaj!)*
 
 ---
