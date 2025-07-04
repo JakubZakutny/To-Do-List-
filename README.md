@@ -4,9 +4,9 @@ Jednoduchá webová To Do aplikácia napísaná v **HTML**, **CSS** a **JavaScri
 
 - ✅ Pridávanie úloh
 - ✅ Označenie úlohy ako hotovej
-- ✅ Upravenie úlohy priamo v zozname (inline editácia)
+- ✅ Inline úprava úlohy priamo v zozname
 - ✅ Vymazanie úlohy s potvrdením
-- ✅ Ukladanie úloh do `localStorage` (úlohy nezmiznú po obnovení stránky)
+- ✅ Ukladanie úloh do `localStorage` (zostanú po obnovení stránky)
 - ✅ Vyhľadávanie úloh
 - ✅ Light/Dark režim
 - ✅ Export úloh do PDF
@@ -14,11 +14,10 @@ Jednoduchá webová To Do aplikácia napísaná v **HTML**, **CSS** a **JavaScri
 
 ---
 
-## 🔗 **Live ukážka**
+## 🔗 **Live verzia**
 
-👉 [**Spustiť online**]([https://jakubzakutny.github.io/To-Do-List/](https://jakubzakutny.github.io/To-Do-List-/)  
-*(Klikni a vyskúšaj!)*
+👉 [**Spustiť online**](https://jakubzakutny.github.io/To-Do-List-/)  
+*(Klikni a vyskúšaj aplikáciu priamo v prehliadači!)*
 
 ---
-
 
