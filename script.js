@@ -1,4 +1,4 @@
-// ➜ Pridať novú úlohu
+//  Pridať novú úlohu
 function addTask() {
   const input = document.getElementById('taskInput');
   const text = input.value.trim();
@@ -15,7 +15,7 @@ function addTask() {
   input.focus();
 }
 
-// ➜ Vytvoriť HTML prvok úlohy
+//  Vytvoriť HTML prvok úlohy
 function createTaskElement(text, done) {
   const li = document.createElement('li');
 
@@ -70,7 +70,7 @@ function createTaskElement(text, done) {
   return li;
 }
 
-// ➜ Inline editácia
+//  Inline editácia
 function startInlineEdit(span) {
   const currentText = span.textContent;
   const input = document.createElement('input');
@@ -87,7 +87,7 @@ function startInlineEdit(span) {
   };
 }
 
-// ➜ Dokončenie inline editácie
+//  Dokončenie inline editácie
 function finishInlineEdit(input, span) {
   const newText = input.value.trim();
   if (newText !== '') span.textContent = newText;
@@ -95,17 +95,17 @@ function finishInlineEdit(input, span) {
   saveTasks();
 }
 
-// ➜ ENTER spustí pridanie úlohy
+//  ENTER spustí pridanie úlohy
 document.getElementById('taskInput').addEventListener('keydown', function (event) {
   if (event.key === 'Enter') addTask();
 });
 
-// ➜ Prepínač témy
+//  Prepínač témy
 function toggleTheme() {
   document.body.classList.toggle('dark');
 }
 
-// ➜ Export PDF
+//  Export PDF
 async function exportToPDF() {
   const { jsPDF } = window.jspdf;
   const doc = new jsPDF();
@@ -145,7 +145,7 @@ async function exportToPDF() {
   doc.save(`ToDo-List-${today.toLocaleDateString()}.pdf`);
 }
 
-// ➜ Uložiť úlohy do localStorage
+//  Uložiť úlohy do localStorage
 function saveTasks() {
   const active = [];
   const done = [];
@@ -163,7 +163,7 @@ function saveTasks() {
   localStorage.setItem('tasks', JSON.stringify({ active, done }));
 }
 
-// ➜ Načítať úlohy zo storage
+//  Načítať úlohy zo storage
 function loadTasks() {
   const saved = localStorage.getItem('tasks');
   if (!saved) return;
@@ -188,7 +188,7 @@ taskInput.addEventListener('input', () => {
   localStorage.setItem('inputValue', taskInput.value);
 });
 
-// ➜ MODAL logika
+//  MODAL logika
 const confirmModal = document.getElementById('confirmModal');
 const confirmDeleteBtn = document.getElementById('confirmDelete');
 const cancelDeleteBtn = document.getElementById('cancelDelete');
@@ -199,7 +199,7 @@ cancelDeleteBtn.onclick = () => {
   liToDelete = null;
 };
 
-// ➜ FINÁLNE VYMAZANIE s fade-out a setTimeout
+//  FINÁLNE VYMAZANIE s fade-out a setTimeout
 confirmDeleteBtn.onclick = () => {
   if (liToDelete) {
     liToDelete.classList.add('fade-out');
@@ -213,7 +213,7 @@ confirmDeleteBtn.onclick = () => {
   confirmModal.style.display = 'none';
 };
 
-// ➜ ESC zatvorí modal
+//  ESC zatvorí modal
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     confirmModal.style.display = 'none';
@@ -221,7 +221,7 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// ➜ Klik mimo modal zatvorí modal
+//  Klik mimo modal zatvorí modal
 window.addEventListener('click', (e) => {
   if (e.target === confirmModal) {
     confirmModal.style.display = 'none';
